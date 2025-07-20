@@ -4,7 +4,6 @@ const App = () => {
   const [randomString, setRandomString] = useState("");
   const [length, setLength] = useState(8);
 
-  // Function to generate a random string
   const generateRandomString = useCallback(() => {
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let result = "";
@@ -14,7 +13,6 @@ const App = () => {
     setRandomString(result);
   }, [length]);
 
-  // Automatically generate a random string when the component mounts
   useEffect(() => {
     generateRandomString();
   }, [generateRandomString]);
